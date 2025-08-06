@@ -1,0 +1,37 @@
+CREATE USER steph IDENTIFIED BY 'T$9Sb:/]4>w+Fb<~';
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON customers 
+TO steph;
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON addresses
+TO steph;
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+ ON orders
+ TO steph;
+ 
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON order_items
+TO steph;
+
+GRANT SELECT
+ON products
+TO steph;
+
+GRANT SELECT
+ON categories
+TO steph;
+
+SHOW GRANTS FOR steph;
+
+REVOKE DELETE
+ON orders
+FROM steph;
+
+REVOKE DELETE
+ON order_items
+FROM steph;
+
+SHOW GRANTS FOR steph;
